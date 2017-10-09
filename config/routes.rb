@@ -3,12 +3,8 @@ Rails.application.routes.draw do
   jsonapi_resources :yogurts
   jsonapi_resources :gelatos
   resources :flavors
-  resources :yogurts do
-    resources :flavors
-  end
-  resources :gelatos do
-    resources :flavors
-  end
+  resources :yogurts
+  resources :gelatos
   resources :contacts
   namespace :admin do
     jsonapi_resources :flavors
