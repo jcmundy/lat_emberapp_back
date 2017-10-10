@@ -1,5 +1,5 @@
 class FlavorResource < JSONAPI::Resource
   attributes :name
-  belongs_to :yogurt
-  belongs_to :gelato
+  relationship :yogurt, to: :one
+  relationship :gelato, to: :one
 end

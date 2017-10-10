@@ -49,7 +49,7 @@ class GelatosController < ApplicationController
         ActiveModelSerializers::Deserialization
           .jsonapi_parse(
               params, only: [
-                  :name
+                  :name, :id, :flavor_id
                   ]
                   )
     end
